@@ -1,17 +1,21 @@
 require 'rubygems'
 require 'rake'
 
+require File.dirname(__FILE__) + '/lib/telegraph/version'
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
+    gem.version = Telegraph::VERSION
     gem.name = "telegraph"
     gem.summary = %Q{}
     gem.description = %Q{}
     gem.email = "kriss.kowalik@gmail.com"
     gem.homepage = "http://github.com/kriss/telegraph"
     gem.authors = ["Kriss Kowalik"]
-    gem.add_development_dependency "riot", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_development_dependency "riot", ">= 0.11.3"
+    gem.add_dependency "eventmachine", ">= 0.12.8"
+    gem.add_dependency "logging", ">= 1.4.3"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
@@ -40,25 +44,11 @@ end
 
 task :test => :check_dependencies
 
-begin
-  require 'reek/adapters/rake_task'
-  Reek::RakeTask.new do |t|
-    t.fail_on_error = true
-    t.verbose = false
-    t.source_files = 'lib/**/*.rb'
-  end
-rescue LoadError
-  task :reek do
-    abort "Reek is not available. In order to run reek, you must: sudo gem install reek"
-  end
-end
-
 task :default => :test
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
+  version = Telegraph::VERSION
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "telegraph #{version}"
   rdoc.rdoc_files.include('README*')

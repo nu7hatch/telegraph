@@ -1,3 +1,3 @@
 require 'rubygems'
 require 'riot'
-require 'telegraph'
+require 'telegraph/base'

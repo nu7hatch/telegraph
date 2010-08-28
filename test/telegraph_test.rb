@@ -1,11 +1,13 @@
-require 'teststrap'
+require "teststrap"
 
-context "telegraph" do
-  setup do
-    false
-  end
-
-  asserts "i'm a failure :(" do
-    topic
-  end
+context "A Telegraph" do 
+  setup { Telegraph }
+  
+  asserts("version") { 
+    topic::VERSION 
+  }.equals("0.2.0")
+  
+  asserts("#new method returns class which ancestors") { 
+    topic.new.ancestors 
+  }.includes(Telegraph::Base)
 end
