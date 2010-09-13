@@ -244,18 +244,6 @@ behavior:
 
 REMEMBER! You *shouldn't overwrite* these options in your application. 
 
-### More
-
-* [Project website](http://telegraphrb.com/) - Additional documentation, news 
-  and links to other resources.
-* [API Docs](http://rdoc.info/projects/kriss/telegraph)
-* [Source code](http://github.com/kriss/telegraph)
-* [Author's website](http://nu7hatch.com)
-* [Contributing](http://telegraphrb.com/contributing) - Find a bug? Need help? 
-  Have a patch?
-* [Irc: #telegraph](irc://chat.freenode.net/#telegraph) on 
-  [freenode.net](http://freenode.net)
-
 ## Note on Patches/Pull Requests
  
 * Fork the project.
@@ -269,4 +257,4 @@ REMEMBER! You *shouldn't overwrite* these options in your application.
 
 ## Copyright
 
-Copyright (c) 2010 Kriss Kowalik. See LICENSE for details.
+Copyright (c) 2010 Kriss 'nu7hatch' Kowalik. See LICENSE for details.

@@ -8,11 +8,14 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.version = Telegraph::VERSION
     gem.name = "telegraph"
-    gem.summary = %Q{}
-    gem.description = %Q{}
+    gem.summary = %Q{Telegraph is DSL for quickly creating TCP servers in Ruby.}
+    gem.description = <<-DESCR
+      Telegraph is DSL for quickly creating TCP servers in Ruby. It's running on  
+      EventMachine and is similar to Sinatra web framework.
+    DESCR
     gem.email = "kriss.kowalik@gmail.com"
-    gem.homepage = "http://github.com/kriss/telegraph"
-    gem.authors = ["Kriss Kowalik"]
+    gem.homepage = "http://github.com/nu7hatch/telegraph"
+    gem.authors = ["Kriss 'nu7hatch' Kowalik"]
     gem.add_development_dependency "riot", ">= 0.11.3"
     gem.add_dependency "eventmachine", ">= 0.12.8"
     gem.add_dependency "logging", ">= 1.4.3"

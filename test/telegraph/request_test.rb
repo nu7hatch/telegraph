@@ -23,14 +23,4 @@ context "An Request" do
       topic.new(["FOO"]).session
     }.equals(Thread.current)
   end
-  
-  context "instance" do 
-    setup { topic.new([]) }
-    
-    asserts_topic.respond_to(:query)
-    asserts_topic.respond_to(:command)
-    asserts_topic.respond_to(:handler)
-    asserts_topic.respond_to(:params)
-    asserts_topic.respond_to(:session)
-  end
 end

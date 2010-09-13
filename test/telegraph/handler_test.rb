@@ -46,14 +46,4 @@ context "An Handler" do
       h.block.call 
     }.equals("YadaYada")
   end
-
-  context "instance" do
-    setup { topic.new("FOO") }
-    
-    asserts_topic.respond_to(:block)
-    asserts_topic.respond_to(:block)
-    asserts_topic.respond_to(:name)
-    asserts_topic.respond_to(:pattern)
-    asserts_topic.respond_to(:options)
-  end
 end

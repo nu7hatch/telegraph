@@ -6,7 +6,7 @@ require 'logging'
 require 'optparse'
 
 begin
-  require 'fastthread' 
+  require 'fastthread'
 rescue LoadError
   $stderr.puts("The fastthread gem not found. Using standard ruby threads.")
 end
